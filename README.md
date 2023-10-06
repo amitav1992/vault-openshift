@@ -622,7 +622,6 @@ Following are the issues I have faced during the vault injector setup.
 Vault agent Template works only after a first pod restart:– The agent was not able to render the template when the pod gets deployed. However, when I restarted the pod, it worked. I suspect it to be a node resource issue as I was using small k8 nodes. Later when i increse the the node resources, i never got the error.
 Templated rendered empty secret values: In vault documentation, for rendering secrets, the systax is given as .Data.key. It didnt work. Somewhere if found that we have to add data to the syntax. eg, .Data.data.apptoken
 error authenticating: error=”context deadline exceeded” : This happends when the vault agent is not able to connect to the vault server or the service account doest have persmissions to read the secrets. Check the vault URL, policy, role and service account mapping.
-Private GKE connectivity issues: In few forums I found people discussing about connecitivy issue (Timeout errors in MutatingWebhookConfiguration) from master to injector controller pods due to fireall issues. I can be solved by adding a custom firewall rule from master to nodes on port 8080. Check out the disuccsion thread here.
 Conclusion
 Using Kubernetes with a vault for secret management, a vault injector is a great way to introduce secrets to pods.
 
