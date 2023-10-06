@@ -1,4 +1,4 @@
-ault Agent Injector Tutorial: Inject Secrets to Pods Using Vault Agent
+Vault Agent Injector Tutorial: Inject Secrets to Pods Using Vault Agent
 by
 Amit Ghosh
 Oct 5 , 2023
